@@ -1,0 +1,8 @@
+@host = http://localhost:8082
+
+### Health check
+GET {{host}}/api/health
+
+### List products
+GET {{host}}/api/products
+Accept: application/json
