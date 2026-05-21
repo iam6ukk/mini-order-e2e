@@ -1,0 +1,6 @@
+### Health Check
+GET http://localhost:8080/api/health
+
+
+### 상품 목록 조회
+GET http://localhost:8080/api/products

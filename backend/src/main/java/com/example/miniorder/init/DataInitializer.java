@@ -6,15 +6,13 @@ import com.example.miniorder.domain.product.Product;
 import com.example.miniorder.domain.product.ProductRepository;
 
 import jakarta.annotation.PostConstruct;
+import lombok.RequiredArgsConstructor;
 
 @Component
+@RequiredArgsConstructor
 public class DataInitializer {
 
     private final ProductRepository productRepository;
-
-    public DataInitializer(ProductRepository productRepository) {
-        this.productRepository = productRepository;
-    }
 
     @PostConstruct
     public void init() {
