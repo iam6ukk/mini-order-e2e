@@ -16,24 +16,32 @@ import lombok.Getter;
 @Table(name = "cart_items")
 public class CartItem {
     @Id
-     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
     private Product product;
 
     private int quantity;
-    protected CartItem() {}
+
+    protected CartItem() {
+    }
 
     public CartItem(Product product, int quantity) {
-        if(quantity <= 0) throw new IllegalArgumentException("수량은 1개 이상이어야 합니다.");
+        if (quantity <= 0)
+            throw new IllegalArgumentException("수량은 1개 이상이어야 합니다.");
         this.product = product;
         this.quantity = quantity;
+    }
+
+    // 장바구니 수량 증가
+    public void addQuantity(int quantity) {
+        this.quantity += quantity;
     }
 
     public int getTotalPrice() {
         return product.getPrice() * quantity;
 
     }
-    
+
 }
