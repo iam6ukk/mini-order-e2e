@@ -1,0 +1,5 @@
+### 주문 생성
+POST http://localhost:8080/api/orders
+
+### 주문 조회
+GET http://localhost:8080/api/orders
