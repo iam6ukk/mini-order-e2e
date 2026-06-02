@@ -1,9 +1,6 @@
 package com.example.miniorder.domain.order;
 
-import org.hibernate.annotations.ManyToAny;
-
 import com.example.miniorder.domain.cart.CartItem;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
